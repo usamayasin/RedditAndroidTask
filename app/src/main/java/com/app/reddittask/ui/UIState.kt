@@ -1,0 +1,8 @@
+package com.app.reddittask.ui
+
+sealed class UIState
+
+object LoadingState : UIState()
+object ContentState : UIState()
+object EmptyState : UIState()
+class ErrorState(val message: String) : UIState()
